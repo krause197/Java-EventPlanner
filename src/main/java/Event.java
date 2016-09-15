@@ -12,11 +12,11 @@ public class Event {
     mEntertainment = entertainment;
   }
 
+  public Integer getGuests() {
+    return mGuests;
+  }
   public String getFood(){
     return mFood;
-  }
-  public String getGuests() {
-    return mGuests;
   }
   public String getBeverages() {
     return mBeverages;

@@ -36,4 +36,12 @@ public class Event {
     }
     return foodCost;
   }
+
+  public Integer addBeverageCost(int foodCost) {
+    Integer beveragesCost = 0;
+    if (mBeverages.equals("Softdrinks")){
+      beveragesCost = foodCost * 1;
+    }
+    return beveragesCost;
+  }
 }

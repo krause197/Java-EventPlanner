@@ -44,4 +44,14 @@ public class EventTest {
     Integer expected = 400;
     assertEquals(expected, testEvent.addFoodCost(40));
   }
+
+  @Test
+  public void addBeverageCost_CalcOneBevCostOption_returnCost(){
+    String beverages = "Softdrinks";
+    int guests = 1;
+    String food = "Steak";
+    Event testEvent = new Event(guests, food, beverages, "");
+    Integer expected = 100;
+    assertEquals(expected, testEvent.addBeverageCost(100));
+  }
 }

@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Event {
   private int mGuests;
   private String mFood;
@@ -13,6 +10,19 @@ public class Event {
     mFood = food;
     mBeverages = beverages;
     mEntertainment = entertainment;
+  }
+
+  public String getFood(){
+    return mFood;
+  }
+  public String getGuests() {
+    return mGuests;
+  }
+  public String getBeverages() {
+    return mBeverages;
+  }
+  public String getEntertainment() {
+    return mEntertainment;
   }
 
   public Integer calcBaseCost() {

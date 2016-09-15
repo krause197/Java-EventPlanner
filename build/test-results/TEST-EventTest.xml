@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EventTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2016-09-15T04:08:14" hostname="epicodus-1.local" time="0.002">
+<testsuite name="EventTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2016-09-15T05:25:04" hostname="Deep-Thought" time="0.005">
   <properties/>
-  <testcase name="calcBaseCost_calculateCostfor1Guest_returnCost" classname="EventTest" time="0.001"/>
-  <testcase name="addFoodCost_CalcMultFoodMultGuestCostOptions_returnCost" classname="EventTest" time="0.0"/>
-  <testcase name="addBeverageCost_CalcMultBevCostOptions1_returnCost" classname="EventTest" time="0.001"/>
+  <testcase name="calcBaseCost_calculateCostfor1Guest_returnCost" classname="EventTest" time="0.002"/>
+  <testcase name="addFoodCost_CalcMultFoodMultGuestCostOptions_returnCost" classname="EventTest" time="0.001"/>
+  <testcase name="addBeverageCost_CalcMultBevCostOptions1_returnCost" classname="EventTest" time="0.0"/>
   <testcase name="addFoodCost_calculateOneFoodCostOption_returnCost" classname="EventTest" time="0.0"/>
   <testcase name="newEvent_initializesEvent" classname="EventTest" time="0.0"/>
-  <testcase name="addBeverageCost_CalcMultBevCostOptions_returnCost" classname="EventTest" time="0.0"/>
+  <testcase name="addBeverageCost_CalcMultBevCostOptions_returnCost" classname="EventTest" time="0.001"/>
   <testcase name="calcBaseCost_calculateCostMultGuest_returnCost" classname="EventTest" time="0.0"/>
   <testcase name="addEntertainmentCost_CalcEntertainmentCost_returnCost" classname="EventTest" time="0.0"/>
   <testcase name="totalCost_CalcTotalCost_returnCost" classname="EventTest" time="0.0"/>

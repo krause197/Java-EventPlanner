@@ -6,14 +6,19 @@ public class Event {
   private String mFood;
   private String mBeverages;
   private String mEntertainment;
-}
 
-//   // Public Event(int guests, String food, String beverages, String entertainment) {
-//   //   mGuests = guests;
-//   //   mFood = food;
-//   //   mBeverages = beverages;
-//   //   mEntertainment = entertainment;
-//   // }
-//
-//
-// }
+
+  public Event(int guests, String food, String beverages, String entertainment) {
+    mGuests = guests;
+    mFood = food;
+    mBeverages = beverages;
+    mEntertainment = entertainment;
+  }
+
+  public Integer calcCost() {
+    Integer cost = (mGuests * 10);
+    return cost;
+  }
+
+
+}

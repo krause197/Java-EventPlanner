@@ -20,7 +20,7 @@ public class Event {
     return baseCost;
   }
 
-  public Integer addFoodCost(int mGuests) {
+  public Integer addFoodCost() {
     Integer foodCost = 0;
     if (mFood.equals("Steak")){
       foodCost = mGuests * 10;
@@ -34,7 +34,7 @@ public class Event {
     return foodCost;
   }
 
-  public Integer addBeverageCost(int mGuests) {
+  public Integer addBeverageCost() {
     Integer beveragesCost = 0;
     if (mBeverages.equals("Softdrinks")){
       beveragesCost = mGuests * 1;
@@ -59,6 +59,7 @@ public class Event {
   }
 
   public Integer totalCost() {
-    
+    Integer totalCost = (calcBaseCost()) + (addFoodCost()) + (addBeverageCost()) + (addEntertainmentCost());
+    return totalCost;
   }
 }

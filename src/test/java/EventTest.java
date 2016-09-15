@@ -33,7 +33,7 @@ public class EventTest {
     int guests = 1;
     Event testEvent = new Event(guests, food, "", "");
     Integer expected = 10;
-    assertEquals(expected, testEvent.addFoodCost(1));
+    assertEquals(expected, testEvent.addFoodCost());
   }
 
   @Test
@@ -42,7 +42,7 @@ public class EventTest {
     int guests = 4;
     Event testEvent = new Event(guests, food, "", "");
     Integer expected = 40;
-    assertEquals(expected, testEvent.addFoodCost(4));
+    assertEquals(expected, testEvent.addFoodCost());
   }
 
   @Test
@@ -51,7 +51,7 @@ public class EventTest {
     int guests = 1;
     Event testEvent = new Event(guests, "", beverages, "");
     Integer expected = 1;
-    assertEquals(expected, testEvent.addBeverageCost(1));
+    assertEquals(expected, testEvent.addBeverageCost());
   }
 
   @Test
@@ -60,7 +60,7 @@ public class EventTest {
     int guests = 2;
     Event testEvent = new Event(guests, "", beverages, "");
     Integer expected = 4;
-    assertEquals(expected, testEvent.addBeverageCost(2));
+    assertEquals(expected, testEvent.addBeverageCost());
   }
 
   @Test
@@ -69,14 +69,25 @@ public class EventTest {
     int guests = 2;
     Event testEvent = new Event(guests, "", beverages, "");
     Integer expected = 30;
-    assertEquals(expected, testEvent.addBeverageCost(2));
+    assertEquals(expected, testEvent.addBeverageCost());
   }
 
   @Test
   public void addEntertainmentCost_CalcEntertainmentCost_returnCost(){
     String entertainment = "Live Band";
     Event testEvent = new Event(1, "", "", entertainment);
-    Integer  expected = 2500;
+    Integer expected = 2500;
     assertEquals(expected, testEvent.addEntertainmentCost());
+  }
+
+  @Test
+  public void totalCost_CalcTotalCost_returnCost(){
+    int guests = 10;
+    String food = "Surf and Turf";
+    String beverages = "Open Bar";
+    String entertainment = "Live Band";
+    Event testEvent = new Event (guests, food, beverages, entertainment);
+    Integer expected = 2900;
+    assertEquals(expected, testEvent.totalCost());
   }
 }

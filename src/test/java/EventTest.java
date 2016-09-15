@@ -32,8 +32,8 @@ public class EventTest {
     String food = "Steak";
     int guests = 1;
     Event testEvent = new Event(guests, food, "", "");
-    Integer expected = 100;
-    assertEquals(expected, testEvent.addFoodCost(10));
+    Integer expected = 10;
+    assertEquals(expected, testEvent.addFoodCost(1));
   }
 
   @Test
@@ -41,17 +41,34 @@ public class EventTest {
     String food = "Lobster";
     int guests = 4;
     Event testEvent = new Event(guests, food, "", "");
-    Integer expected = 400;
-    assertEquals(expected, testEvent.addFoodCost(40));
+    Integer expected = 40;
+    assertEquals(expected, testEvent.addFoodCost(4));
   }
 
   @Test
   public void addBeverageCost_CalcOneBevCostOption_returnCost(){
     String beverages = "Softdrinks";
     int guests = 1;
-    String food = "Steak";
-    Event testEvent = new Event(guests, food, beverages, "");
-    Integer expected = 100;
-    assertEquals(expected, testEvent.addBeverageCost(100));
+    Event testEvent = new Event(guests, "", beverages, "");
+    Integer expected = 1;
+    assertEquals(expected, testEvent.addBeverageCost(1));
+  }
+
+  @Test
+  public void addBeverageCost_CalcMultBevCostOptions_returnCost(){
+    String beverages = "Cash Bar";
+    int guests = 2;
+    Event testEvent = new Event(guests, "", beverages, "");
+    Integer expected = 4;
+    assertEquals(expected, testEvent.addBeverageCost(2));
+  }
+
+  @Test
+  public void addBeverageCost_CalcMultBevCostOptions1_returnCost(){
+    String beverages = "Open Bar";
+    int guests = 2;
+    Event testEvent = new Event(guests, "", beverages, "");
+    Integer expected = 30;
+    assertEquals(expected, testEvent.addBeverageCost(2));
   }
 }

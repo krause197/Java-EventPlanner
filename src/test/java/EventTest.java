@@ -71,4 +71,12 @@ public class EventTest {
     Integer expected = 30;
     assertEquals(expected, testEvent.addBeverageCost(2));
   }
+
+  @Test
+  public void addEntertainmentCost_CalcEntertainmentCost_returnCost(){
+    String entertainment = "Live Band";
+    Event testEvent = new Event(1, "", "", entertainment);
+    Integer  expected = 2500;
+    assertEquals(expected, testEvent.addEntertainmentCost());
+  }
 }

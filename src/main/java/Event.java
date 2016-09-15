@@ -24,14 +24,11 @@ public class Event {
     Integer foodCost = 0;
     if (mFood.equals("Steak")){
       foodCost = mGuests * 10;
-    }
-    if (mFood.equals("Lobster")){
+    } else if (mFood.equals("Lobster")){
       foodCost = mGuests * 10;
-    }
-    if (mFood.equals("Surf and Turf")){
+    } else if (mFood.equals("Surf and Turf")){
       foodCost = mGuests * 15;
-    }
-    if (mFood.equals("Vegitarian")){
+    } else if (mFood.equals("Vegitarian")){
       foodCost = mGuests * 7;
     }
     return foodCost;
@@ -41,13 +38,27 @@ public class Event {
     Integer beveragesCost = 0;
     if (mBeverages.equals("Softdrinks")){
       beveragesCost = mGuests * 1;
-    }
-    if (mBeverages.equals("Cash Bar")){
+    } else if (mBeverages.equals("Cash Bar")){
       beveragesCost = mGuests * 2;
-    }
-    if (mBeverages.equals("Open Bar")){
+    } else if (mBeverages.equals("Open Bar")){
       beveragesCost = mGuests * 15;
     }
     return beveragesCost;
+  }
+
+  public Integer addEntertainmentCost() {
+    Integer entertainmentCost = 0;
+    if (mEntertainment.equals("Live Band")){
+      entertainmentCost = 2500;
+    } else if (mEntertainment.equals("DJ")){
+      entertainmentCost = 500;
+    } else if (mEntertainment.equals("iPod")){
+      entertainmentCost = 100;
+    }
+    return entertainmentCost;
+  }
+
+  public Integer totalCost() {
+    
   }
 }

@@ -15,10 +15,16 @@ public class Event {
     mEntertainment = entertainment;
   }
 
-  public Integer calcCost() {
-    Integer cost = (mGuests * 10);
-    return cost;
+  public Integer calcBaseCost() {
+    Integer baseCost = (mGuests * 10);
+    return baseCost;
   }
 
-
+  public Integer addFoodCost(int baseCost) {
+    Integer foodCost = 0;
+    if (mFood.equals("Steak")){
+      foodCost = baseCost + 10;
+    }
+    return foodCost;
+  }
 }

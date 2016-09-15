@@ -32,7 +32,16 @@ public class EventTest {
     String food = "Steak";
     int guests = 1;
     Event testEvent = new Event(guests, food, "", "");
-    Integer expected = 20;
+    Integer expected = 100;
     assertEquals(expected, testEvent.addFoodCost(10));
+  }
+
+  @Test
+  public void addFoodCost_CalcMultFoodMultGuestCostOptions_returnCost(){
+    String food = "Lobster";
+    int guests = 4;
+    Event testEvent = new Event(guests, food, "", "");
+    Integer expected = 400;
+    assertEquals(expected, testEvent.addFoodCost(40));
   }
 }

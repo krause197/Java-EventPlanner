@@ -23,7 +23,16 @@ public class Event {
   public Integer addFoodCost(int baseCost) {
     Integer foodCost = 0;
     if (mFood.equals("Steak")){
-      foodCost = baseCost + 10;
+      foodCost = baseCost * 10;
+    }
+    if (mFood.equals("Lobster")){
+      foodCost = baseCost * 10;
+    }
+    if (mFood.equals("Surf and Turf")){
+      foodCost = baseCost * 15;
+    }
+    if (mFood.equals("Vegitarian")){
+      foodCost = baseCost * 7;
     }
     return foodCost;
   }
